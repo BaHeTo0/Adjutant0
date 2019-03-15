@@ -9,8 +9,8 @@ const botDiscord = new discord.Client();
 const botTwitch = tmi.client(utils.opts);
 
 //passing the clients to the event handlers
-discordEvents.init(botDiscord);
-twitchEvents.init(botTwitch);
+discordEvents.init(botDiscord, botTwitch);
+twitchEvents.init(botDiscord, botTwitch);
 
 //twitch event handling
 botTwitch.on("connected", twitchEvents.onConnectedHandler);
