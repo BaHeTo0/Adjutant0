@@ -2,5 +2,6 @@
     "tokenDiscord": "exampleToken",
     "tokenTwitch": "exampleToken",
     "meID": "Streamer discord id",
-    "alertsID": "discord alerts channel id"
+    "alertsID": "discord alerts channel id",
+    "twitterFeedID": "discord twitter-feed channel id"
 }

@@ -20,11 +20,11 @@ module.exports.onMessageHandler = function(target, context, message, self){
 
     // If the command is known, let's execute it
     if (commandName === '!dice') {
-        rollDice();
+        rollDice(target);
     }
 }
 
-let rollDice = function(){
+let rollDice = function(target){
     const num = Math.floor(Math.random() * 6) + 1;
     botTwitch.say(target, `You rolled a ${num}`);
 }
