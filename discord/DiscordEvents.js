@@ -19,12 +19,9 @@ module.exports.onMessage = function(msg){
 }
 
 module.exports.onPresenceUpdate = function(oldMember, newMember){
-    console.log("presence update fired");
     if(newMember.id === utils.constants.meID){
-        console.log("member is BaHeTo0");
-        if((newMember.presence.status === "dnd") && (oldMember.presence.status !== "dnd")){
-            console.log("went into dnd")
-            bot.channels.get(utils.constants.alertsID).send("BaHeTo0 is pissed!");
+        if((newMember.presence.game.streaming) && (!oldMember.presence.game.streaming)){
+            bot.channels.get(utils.constants.alertsID).send("@everyone BaHeTo0 just went live on https://twitch.tv/baheto0");
         }
     }
 }
