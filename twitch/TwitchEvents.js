@@ -15,7 +15,7 @@ module.exports.onConnectedHandler = function(address, port){
 
 module.exports.onMessageHandler = function(target, context, message, self){
     if (self) return;// Ignore messages from the bot
-    timers.message;//Update the message count in timers.js
+    timers.message();//Update the message count in timers.js
 
     // Remove whitespace from chat message
     const commandName = message.trim();

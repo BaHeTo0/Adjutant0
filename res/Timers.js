@@ -1,8 +1,8 @@
 const utils = require("./Utils.js");
 
-const INTERVAL_TIME_IN_MINUTES = 5;
-const AT_LEAST_MESSEGES_COUNT = 5;
-const announcements = [
+const INTERVAL_TIME_IN_MINUTES = 1;
+const AT_LEAST_MESSEGES_COUNT = 0;
+let announcements = [
     "Join this weirdo's discord: https://discord.gg/WyUZANb",
     "Follow that guy on twitter: https://twitter.com/baheto0"
 ];
@@ -31,5 +31,5 @@ setInterval(function(){
 }, INTERVAL_TIME_IN_MINUTES*60000);
 
 let announce = function(){
-    botTwitch.say(utils.opts.channels[0],announcements[Math.floor(Math.random*2)]);
+    botTwitch.say(utils.opts.channels[0],announcements[Math.floor(Math.random()*2)]);
 }
